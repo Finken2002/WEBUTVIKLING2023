@@ -20,6 +20,7 @@
         </header>
         <section>
             <article>
+<<<<<<< HEAD
                 <form method="post" action="#">
                     <!-- Etikett og innputfelt for e-postadresse -->
                     <label for="email">E-postadresse</label>
@@ -32,12 +33,14 @@
                     <a href="#">Glemt passord?</a>
                 </form>
                 <!-- Knapp for å åpne registreringsskjema -->
+
                 <button onclick="openClose(`flex`)">Opprett ny konto</button>
             </article>
             <!-- Beskrivende tekst og en lenke for å opprette en side -->
             <p><strong>Opprett en side</strong> for en kjendis, et merke eller en bedrift.</p>
         </section>
     </main>
+<<<<<<< HEAD
    <!-- Seksjon for brukerregistrering (skjult som standard) -->
    <section id="user-registration">
     <form id="user-reg" method="post" action="#" autocomplete="on">
@@ -125,6 +128,82 @@
         document.getElementById("user-registration").style.display = value;
     }
 </script>
+=======
+    <section id="user-registration">
+        <form id="user-reg">
+            <span onclick="openClose(`none`)">X</span>
+            <h3>Registrer bruker</h3>
+            <h4>Det er raskt og lett</h4>
+            <label for="name">
+                Fornavn
+                <input type="text" name="name" placeholder="Finn">
+            </label>
+            <label for="lname">
+                Etternavn
+                <input type="text" name="lname" placeholder="Nordman..">
+            </label>
+            <label for="user-reg-email">E-postadresse</label>
+            <input type="email" name="user-reg-email" id="user-reg-email" placeholder="finn@epost.no">
+            <label for="user-reg-pass">Passord</label>
+            <input type="passeword" name="user-reg-pass" id="user-reg-pass" placeholder="*******">
+            <label class="select-option-text">Fødselsdato</label>
+            <select id="day" name="daylist" form="user-reg">
+ 
+            </select>
+            <select id="month" name="monthlist" form="user-reg">
+                <option value="jan">jan.</option>
+                <option value="feb">feb.</option>
+                <option value="mars">mars</option>
+                <option value="april">april</option>
+                <option value="mai">mai</option>
+                <option value="juni">juni</option>
+                <option value="juli">juli</option>
+                <option value="aug">aug.</option>
+                <option value="sep">sep.</option>
+                <option value="okt">okt.</option>
+                <option value="nov">nov.</option>
+                <option value="des">des.</option>
+            </select>
+            <select id="year" name="yearlist" form="user-reg">
+
+            </select>
+            <label class="select-option-text">Kjønn</label>
+            <label class="radio-label">
+                Mann
+                <input type="radio" value="mann" id="mann" name="gender">
+            </label>
+            <label class="radio-label">
+                Kvinne
+                <input type="radio" value="kvinne" id="kvinne" name="gender">
+            </label>
+            <p>Personer som bruker tjenesten vår, kan ha lastet opp kontaktinformasjonen din på Fjasebook</p>
+            <p>Ved å klikke på Registrer deg godtar du våre betingelser.</p>
+            <input type="submit" value="Registrer">
+        </form>
+        
+    </section>
+
+    <script>
+        
+        let dayList = document.getElementById("day")
+        let yearList = document.getElementById("year")
+        let thisYear = new Date().getFullYear()
+        
+        for(let i = 1; i <= 31; i++){
+            let option = new Option(i,i)
+            dayList.appendChild(option)
+        }
+
+        for(let i = thisYear; i >= thisYear - 100; i-- ){
+            let option = new Option(i,i)
+            yearList.appendChild(option)
+        }
+
+        const openClose = (value)=>{
+            document.getElementById("user-registration").style.display = value;
+        }
+    </script>
+>>>>>>> 1fe27c34e8cd4ba27e684b7e48cb9e5e13dcdfb3
 </body>
 </html>
  
